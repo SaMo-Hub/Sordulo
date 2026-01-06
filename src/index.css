@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: ZtBrosOskon;
+  src: url('../public/font/ZTBrosOskon90s-Regular.otf');
+}
+@font-face {
+  font-family: Supply;
+  src: url('../public/font/PPNeueMontrealMono-Medium.otf');
+}
+
+
+
+@theme {
+  --font-ztbroskon: "ZtBrosOskon", sans-serif; 
+  --font-supply: "Supply", sans-serif; 
+  --font-neue: "Neue Montreal", sans-serif; 
+  --color-primary:#E72E00;
+  --color-secondary:#FEF8F2;
+  --text-headings : 160px;
+  --text-paragraphe : 16px;
+  --text-supply : 14px;
+  --spacing-margin: 64px;
+  --spacing-space-bottom : 150px;
+  --spacing-text-bottom : 40px;
+  --text-smallheadings : 80px;
+  --text-smallparagraphe : 16px;
+  --spacing-smallmargin: 30px;
+  --spacing-smallspace-bottom : 120px;
+  --spacing-smalltext-bottom : 20px
+}
+
+html 
+.custom-selection::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
+}
+canvas{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: inherit;
+}
+
+.line-wrapper {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.reveal-line {
+  display: inline;
+}
+.word{
+  overflow: hidden;
+}
+
+.line{
+overflow: hidden;
+}
+
+.clip-text {
+  clip-path: polygon(100% 0, 0% 0, 0% 100%, 100% 100%);
+}
+
+.clip-text:hover {
+  clip-path: polygon(50% 0, 0% 0, 0% 100%, 50% 100%);
+}
+
+
+.always-visible-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.always-visible-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+.always-visible-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.always-visible-scrollbar {
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+  scrollbar-width: thin;
+}
